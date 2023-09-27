@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Better Paster",
+  "description": "Quickly copy and paste your favorites",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icon/icon-16.png",
+    "32": "icon/icon-32.png",
+    "48": "icon/icon-48.png",
+    "128": "icon/icon-128.png"
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "action": {},
+  "options_page": "html/options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["js/content.js"],
+      "css": ["css/content.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["storage", "clipboardWrite"],
+  "default_locale": "en"
+}

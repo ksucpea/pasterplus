@@ -1,0 +1,201 @@
+.paster-container {
+    background: #000000e6!important;
+    backdrop-filter: blur(2px)!important;
+    border-radius: 0px!important;
+    position: fixed!important;
+    top: 20px;
+    left: 20px;
+    z-index: 10000!important;
+    display: flex;
+    border-radius: 8px!important;
+    overflow: hidden!important;
+    color: #fff!important;
+    bottom: auto!important;
+    right: auto!important;
+    width: 360px!important;
+    --paster-color: #f955af!important;
+}
+
+.paster-container button:hover {
+    cursor: pointer!important;
+}
+
+.paster-container *::-webkit-scrollbar {
+    width: 8px !important;
+}
+
+.paster-container *::-webkit-scrollbar-track {
+    border-radius: 16px !important;
+    background: #59595924 !important;
+}
+
+.paster-container *::-webkit-scrollbar-thumb {
+    border-radius: 16px !important;
+    background-color: #f955af90 !important;
+}
+
+.paster-saved-btn {
+    font-size: 14px !important;
+    line-height:14px!important;
+    background: none !important;
+    border: 1px solid #898989 !important;
+    color: #fff !important;
+    padding: 6px 8px !important;
+    overflow-wrap: anywhere !important;
+    transition: .1s all!important;
+    border-radius: 4px!important;
+}
+
+.paster-saved-btn:hover {
+    background: #f955af0f !important;
+    color: #fff !important;
+    border: 1px solid #f955af !important;
+    cursor: pointer!important;
+}
+
+.paster-saved-btns {
+    display: flex!important;
+    gap: 2px!important;
+    margin-bottom: 10px!important;
+    flex-wrap: wrap!important;
+    max-height: 260px!important;
+    overflow: auto!important;
+}
+
+.paster-add-input,
+.paster-group-input {
+    background: none !important;
+    border: 1px solid var(--paster-color) !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    color: #fff !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.paster-group-input {
+    margin-bottom: 5px!important;
+    padding: 5px!important;
+}
+
+.paster-add-input {
+    min-height: 70px !important;
+    margin: 0!important;
+    margin-bottom: 5px!important;
+}
+
+.paster-groups {
+    margin-top: 5px!important;
+}
+
+.paster-group {
+    list-style-type: none!important;
+    padding: 3px 0!important;
+    font-size: 13px!important;
+    line-height: 13px!important;
+    color: #ababab!important;
+}
+
+.paster-group.paster-active {
+    font-weight: bold!important;
+    color: #fff!important;
+}
+
+.paster-group:hover {
+    cursor: pointer!important;
+}
+
+.paster-main {
+    padding: 20px!important;
+}
+
+.paster-groups-container {
+    background: #59595924!important;
+    padding: 20px!important;
+    max-width: 110px!important;
+    min-width: 110px!important;
+    box-sizing: border-box!important;
+}
+
+.paster-add-btn,
+.paster-add-save,
+.paster-group-add,
+.paster-group-del,
+.paster-edit-btn {
+    font-weight: bold !important;
+    border-radius: 4px !important;
+    padding: 3px 6px !important;
+    border: none !important;
+    text-align: center !important;
+}
+
+.paster-add-btn,
+.paster-add-save,
+.paster-group-add {
+    color: #000 !important;
+    background: var(--paster-color) !important;
+}
+
+.paster-add-group,
+.paster-back-btn {
+    color: var(--paster-color) !important;
+    font-weight: bold !important;
+    border: none !important;
+    background: none !important;
+    font-size: 13px !important;
+    padding: 0 !important;
+    text-align: left !important;
+}
+
+.paster-edit-btn,
+.paster-group-del {
+    background: #292929 !important;
+    color: #fff !important;
+}
+
+.paster-add-btn {
+    width: 100% !important;
+    padding: 5px 0px !important;
+    font-size: 14px !important;
+}
+
+.paster-create-container {
+    display: none;
+}
+
+.paster-container:hover {
+    cursor: grab!important;
+}
+
+.paster-header {
+    color: #fff!important;
+    margin: 0!important;
+    padding: 0!important;
+    font-size: 18px!important;
+    margin-bottom: 10px!important;
+    font-weight: bold!important;
+}
+
+.paster-btns {
+    display: flex!important;
+    gap: 5px!important;
+}
+
+.paster-remove-btn {
+    background: none !important;
+    color: inherit !important;
+    border: none !important;
+    display: none;
+}
+
+.paster-add-btn,
+.paster-edit-btn,
+.paster-group-add,
+.paster-group-del {
+    flex: 1!important;
+}
+
+.paster-btn-container {
+    display: flex!important;
+    gap: 5px!important;
+}
