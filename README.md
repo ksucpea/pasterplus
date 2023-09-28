@@ -1,3 +1,4 @@
+<span>h<span>e<span>l</span>l</span>o</span>
 <h1>Better Paster</h1>
 
 Contact me at ksucpea@gmail.com or you can open an issue here
