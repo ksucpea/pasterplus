@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Better Paster",
-  "description": "Quickly copy and paste your favorites",
+  "name": "PasterPlus",
+  "description": "Quickly copy and paste your favorite symbols, emojis, or phrases with ease",
   "version": "1.0.0",
   "icons": {
     "16": "icon/icon-16.png",
@@ -23,5 +23,10 @@
     }
   ],
   "permissions": ["storage", "clipboardWrite"],
-  "default_locale": "en"
+  "web_accessible_resources": [
+    {
+      "resources": [ "fonts/Rubik.ttf" ],
+      "matches": [ "https://*/*" ]
+    }
+  ]
 }

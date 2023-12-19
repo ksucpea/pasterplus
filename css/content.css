@@ -1,23 +1,38 @@
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400 600 800;
+    src: url('chrome-extension://__MSG_@@extension_id__/fonts/Rubik.ttf');
+}
+
 .paster-container {
-    background: #000000e6!important;
-    backdrop-filter: blur(2px)!important;
-    border-radius: 0px!important;
-    position: fixed!important;
+    --paster-width: 360px;
+    --paster-height: 260px;
+    --paster-color: #f955af;
+    --paste-item-size: 14px;
+    font-family: 'Rubik' !important;
+    background: #000000e6 !important;
+    backdrop-filter: blur(2px) !important;
+    border-radius: 0px !important;
+    position: fixed !important;
     top: 20px;
     left: 20px;
-    z-index: 10000!important;
+    z-index: 10000 !important;
     display: flex;
-    border-radius: 8px!important;
-    overflow: hidden!important;
-    color: #fff!important;
-    bottom: auto!important;
-    right: auto!important;
-    width: 360px!important;
-    --paster-color: #f955af!important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    color: #fff !important;
+    bottom: auto !important;
+    right: auto !important;
+    width: var(--paster-width) !important;
+}
+
+.paster-container button {
+    font-family: 'Rubik'!important;
 }
 
 .paster-container button:hover {
-    cursor: pointer!important;
+    cursor: pointer !important;
 }
 
 .paster-container *::-webkit-scrollbar {
@@ -31,35 +46,35 @@
 
 .paster-container *::-webkit-scrollbar-thumb {
     border-radius: 16px !important;
-    background-color: #f955af90 !important;
+    background-color: var(--paster-color) !important;
 }
 
 .paster-saved-btn {
-    font-size: 14px !important;
-    line-height:14px!important;
+    font-size: var(--paster-item-size) !important;
+    line-height: var(--paster-item-size) !important;
     background: none !important;
     border: 1px solid #898989 !important;
     color: #fff !important;
     padding: 6px 8px !important;
     overflow-wrap: anywhere !important;
-    transition: .1s all!important;
-    border-radius: 4px!important;
+    transition: .1s all !important;
+    border-radius: 4px !important;
 }
 
 .paster-saved-btn:hover {
-    background: #f955af0f !important;
+    /*background: #f955af0f !important;*/
     color: #fff !important;
-    border: 1px solid #f955af !important;
-    cursor: pointer!important;
+    border: 1px solid var(--paster-color) !important;
+    cursor: pointer !important;
 }
 
 .paster-saved-btns {
-    display: flex!important;
-    gap: 2px!important;
-    margin-bottom: 10px!important;
-    flex-wrap: wrap!important;
-    max-height: 260px!important;
-    overflow: auto!important;
+    display: flex !important;
+    gap: 2px !important;
+    margin-bottom: 10px !important;
+    flex-wrap: wrap !important;
+    max-height: var(--paster-height) !important;
+    overflow: auto !important;
 }
 
 .paster-add-input,
@@ -74,47 +89,54 @@
 }
 
 .paster-group-input {
-    margin-bottom: 5px!important;
-    padding: 5px!important;
+    margin-bottom: 5px !important;
+    padding: 5px !important;
 }
 
 .paster-add-input {
     min-height: 70px !important;
-    margin: 0!important;
-    margin-bottom: 5px!important;
+    margin: 0 !important;
+    margin-bottom: 5px !important;
 }
 
 .paster-groups {
-    margin-top: 5px!important;
+    margin-top: 5px !important;
+}
+
+.paster-groups:hover,
+.paster-saved-btns:hover {
+    cursor: pointer;
 }
 
 .paster-group {
-    list-style-type: none!important;
-    padding: 3px 0!important;
-    font-size: 13px!important;
-    line-height: 13px!important;
-    color: #ababab!important;
+    list-style-type: none !important;
+    padding: 3px 0 !important;
+    font-size: 13px !important;
+    line-height: 13px !important;
+    color: #ababab !important;
 }
 
 .paster-group.paster-active {
-    font-weight: bold!important;
-    color: #fff!important;
+    font-weight: bold !important;
+    color: #fff !important;
 }
 
 .paster-group:hover {
-    cursor: pointer!important;
+    cursor: pointer !important;
 }
 
 .paster-main {
-    padding: 20px!important;
+    width: 100%;
+    padding: 20px !important;
+    overflow: hidden!important;
 }
 
 .paster-groups-container {
-    background: #59595924!important;
-    padding: 20px!important;
-    max-width: 110px!important;
-    min-width: 110px!important;
-    box-sizing: border-box!important;
+    background: #59595924 !important;
+    padding: 20px !important;
+    max-width: 110px !important;
+    min-width: 110px !important;
+    box-sizing: border-box !important;
 }
 
 .paster-add-btn,
@@ -137,7 +159,8 @@
 }
 
 .paster-add-group,
-.paster-back-btn {
+.paster-back-btn,
+.paster-exit-btn {
     color: var(--paster-color) !important;
     font-weight: bold !important;
     border: none !important;
@@ -145,6 +168,10 @@
     font-size: 13px !important;
     padding: 0 !important;
     text-align: left !important;
+}
+
+.paster-back-btn {
+    margin-bottom: 5px;
 }
 
 .paster-edit-btn,
@@ -164,21 +191,21 @@
 }
 
 .paster-container:hover {
-    cursor: grab!important;
+    cursor: grab !important;
 }
 
 .paster-header {
-    color: #fff!important;
-    margin: 0!important;
-    padding: 0!important;
-    font-size: 18px!important;
-    margin-bottom: 10px!important;
-    font-weight: bold!important;
+    color: #fff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    font-family: 'Rubik' !important;
 }
 
 .paster-btns {
-    display: flex!important;
-    gap: 5px!important;
+    display: flex !important;
+    gap: 5px !important;
 }
 
 .paster-remove-btn {
@@ -192,10 +219,74 @@
 .paster-edit-btn,
 .paster-group-add,
 .paster-group-del {
-    flex: 1!important;
+    flex: 1 !important;
 }
 
 .paster-btn-container {
-    display: flex!important;
-    gap: 5px!important;
+    display: flex !important;
+    gap: 5px !important;
+}
+
+.paster-header-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.paster-exit-btn {
+    height: 16px;
+}
+
+.paster-setting {
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    flex-wrap: wrap!important;
+}
+
+.paster-setting-input[type="text"], .paster-setting-input[type="number"] {
+    min-width: 70px !important;
+    max-width: 70px !important;
+    font-size: 13px !important;
+    background: #2929297a !important;
+    border: none !important;
+    border-radius: 6px !important;
+    color: #fff !important;
+    padding: 5px 8px !important;
+    font-family: 'Rubik' !important;
+    margin: 0 !important;
+}
+
+.paster-setting-des {
+    font-size: 14px !important;
+}
+
+.paster-setting {
+    margin-bottom: 5px;
+}
+
+.paster-show-confirm {
+    animation: fade-out-up;
+    animation-duration: .6s;
+    animation-timing-function: linear;
+}
+
+#paster-confirm-copy {
+    opacity: 0;
+}
+
+@keyframes fade-out-up {
+    0% {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1
+    }
+
+    100% {
+        transform: translateY(-34px);
+        opacity: 0;
+    }
 }
